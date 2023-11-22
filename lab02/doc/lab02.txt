@@ -30,7 +30,16 @@ doxyfile, Makefile, README.md, src, test та додали командою git 
 Інформація про тварину №06: Корова: зріст = 94 см, маса = 41 гр.
 
 
-5. Не розібрався з lldb, а запису не було.
+5. За допомогою lldb, а саме команди lldb main.bin відкрили відладчик, поставили breakpoint на 49 лінії (b 49) і вивели кінцеві значення змінної animals командою fr v:
+
+(animal[6]) animals = {
+  [0] = (type = DOG, height = 69, weight = 117)
+  [1] = (type = DOG, height = 96, weight = 54)
+  [2] = (type = COW, height = 21, weight = 91)
+  [3] = (type = HUMAN, height = 50, weight = 63)
+  [4] = (type = PIG, height = 108, weight = 6)
+  [5] = (type = PIG, height = 44, weight = 73)
+}
 
 6. Зафіксували зміни за допомогою git commit
 
