@@ -1,48 +1,53 @@
 #include <stdio.h>
-void num_in_words (int input, int num_pos); //number in words function
-void NSD_function (int number_one, int number_two, int NSD); //NSD function
-	char *single[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}; //pointer arrays
+/**
+*Дві функції для перетворення чисел в слова та знаходження НСД
+*/
+void num_in_words (int input, int num_pos); 
+void NSD_function (int number_one, int number_two, int NSD); 
+/**
+*Три масиви з назвами чисел та один з самими числами
+*/
+	char *single[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}; 
 	char *doubles[] = {"", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 	char *tens[] = {"", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
-	int numArray[5] = {'\0'}; //number array for first function
+	int numArray[5] = {'\0'}; 
 
 int main()
 {
-	srand(time(NULL));	//to generate random numbers
-	int function;	//to store input
+	srand(time(NULL));	
+	int function;
 	printf("Якщо хочете перетворити число в слова натисніть 1\nЯкщо хочете знайти НСД натисніть 2\n");
 	scanf("%d", &function);
-		if (function == 1) {
-			num_in_words(0 + random() % (9999 - 0 + 1),4);	//calling 1st function and giving random values
+		if (function == 1) {	/**Якщо вибрано певну дію, викликаємо потрібну функцію і задаємо рандомні значення*/
+			num_in_words(0 + random() % (9999 - 0 + 1),4);
 }	else if (function == 2) {
-			NSD_function(0 + random() % (9999 - 0 + 1), 0 + random() % (9999 - 0 + 1), 0); //calling 2nd function and fiving random values
+			NSD_function(0 + random() % (9999 - 0 + 1), 0 + random() % (9999 - 0 + 1), 0); 
 }
 
 
 	return 0;
 }
 
-	void num_in_words (int input, int num_pos) //first function
+	void num_in_words (int input, int num_pos) /**Перша функція*/
 {
-	num_pos = 4; //number position in array
+	num_pos = 4; /**Змінна для позиції числа в масиві*/
 		
-			if (input == 0) {		//if function for zero
+			if (input == 0) {		/**Якщо введені дані 0 або більше 9999, завершити роботу*/
 				printf("zero");
-}	else if (input > 9999)	{ 		//if number bigger than 9999
+}	else if (input > 9999)	{ 		
 				printf("надто велике число \n");
 				return;
 }
 				
 
-				while (input != 0) {	//cycle to give each number position in array
+				while (input != 0) {	/**Цикл в якому число ділиться на 10, а частка від цього ділення являє собою число яке піде в масив*/
 					numArray[num_pos] = input % 10;
 					input /= 10;	
-				printf("%d\n", numArray[num_pos]);
 					num_pos--;
 }
 
 
-				if (numArray[1] == 1) {		//output
+				if (numArray[1] == 1) {		/**вивід значень та приставок на екран*/
 					printf(" %s thousend", single[numArray[1]]);
 }	else if (numArray[1] > 1)	{
 					printf(" %s thousends", single[numArray[1]]);
@@ -67,17 +72,17 @@ int main()
 }
 
 
-	void NSD_function (int number_one, int number_two, int NSD) //second function
+	void NSD_function (int number_one, int number_two, int NSD) /**Друга функція*/
 {
-			while (number_one != number_two) {		//while loop
-				if (number_one > number_two) {		//using euclid's algorithm
+			while (number_one != number_two) {		/**цикл, який використовує метод евкліда*/
+				if (number_one > number_two) {		
 						number_one = number_one - number_two;
 }
 				else {
 						number_two = number_two - number_one;
 }
 }
-			NSD = number_one; //final value
-		printf("\n НСД = %i \n", NSD); //print result
+			NSD = number_one; /**кінцеве значення*/
+		printf("\n НСД = %i \n", NSD); /**вивід результату на екран*/
 	return;
 }

@@ -13,8 +13,8 @@ main.bin: src/main.c
 run: clean prep
 	./dist/main.bin
 all:clean prep compile check
-doxygen: 
-	mkdir dist/html
+doxy:
+	doxygen Doxyfile
 check:
 	clang-format --verbose -dry-run --Werror src/*
 	clang-tidy src/*.c  -checks=-readability-uppercase-literal-suffix,-readability-magic-numbers,-clang-analyzer-deadcode.DeadStores,-clang-analyzer-security.insecureAPI.rand
