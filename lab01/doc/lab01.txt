@@ -91,4 +91,4 @@ index 0fe857b..6806bbd 100644
  /**
   * Кількість тварин у масиві
   */
--#define ANIMAL_COUNT 10
+-#define ANIMAL_COUNT 10 
