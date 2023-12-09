@@ -45,5 +45,5 @@ int main()
 	}
 	show_animals(animals, ANIMAL_COUNT);
 
-	return 0;
+	return 0; 
 }
