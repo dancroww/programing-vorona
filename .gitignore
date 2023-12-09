@@ -1,3 +1,2 @@
-dist/
-.idea
-cmake-build-debug
+dist/main.bin
+lab02/Doxyfile
