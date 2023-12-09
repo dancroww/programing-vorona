@@ -37,7 +37,6 @@ int main()
 				while (input != 0) {	//cycle to give each number position in array
 					numArray[num_pos] = input % 10;
 					input /= 10;	
-				printf("%d\n", numArray[num_pos]);
 					num_pos--;
 }
 
