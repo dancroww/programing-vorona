@@ -46,4 +46,4 @@ doxyfile, Makefile, README.md, src, test та додали командою git 
 7. Додали назву remote - git remote add origin *посилання на мій репозиторій в гітхабі*
 
 8. Трохи змінили структуру, щоб вона відповідала методичці та завантажали зміни
-командою git push -u origin main
+командою git push -u origin main 
