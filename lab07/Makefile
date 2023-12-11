@@ -10,7 +10,7 @@ compile: main.bin
 
 main.bin: src/main.c
 	$(CC) $(C_OPTS) $< -o ./dist/$@
-run: clean prep
+run: clean prep compile
 	./dist/main.bin
 all:clean prep compile check
 check:
