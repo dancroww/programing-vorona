@@ -1,13 +1,7 @@
-#include <stdio.h>
 int main()
 {
-	int number_one; //variables for number input
-	int number_two;
-	int NSD; //variable to print result
-		printf ("\n введіть перше число \n");
-			scanf("%i", &number_one);		//waiting for the first input
-		printf ("\n введіть друге число \n");
-			scanf("%i", &number_two);		//waiting for the second input
+	int number_one = 244; //variables for numbers
+	int number_two = 642;
 			while (number_one != number_two) {		//while loop
 				if (number_one > number_two) {		//using euclid's algorithm
 						number_one = number_one - number_two;
@@ -16,7 +10,6 @@ int main()
 						number_two = number_two - number_one;
 }
 }
-			NSD = number_one; //final value
-		printf("\n НСД = %i \n", NSD); //print result
+			int NSD = number_one; //final value
 	return 0;
 }
