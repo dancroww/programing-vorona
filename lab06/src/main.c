@@ -1,52 +1,34 @@
-#include <stdio.h>
 int main()
 {
-	int input; //variable for input
+	int input = 3415;	//variable for input
 	int numArray[5] = {'\0'};	//array to store numbers
 	int num_pos = 4;	//variable for number position in array
-	char *single[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};		//pointer to the array for one digit numbers
-	char *doubles[] = {"", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};	//pointer to array with numbers from 11 to 19
-	char *tens[] = {"", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"}; 		//pointer to array for tens
-		
-		printf("Введіть число до 10000 \n");	//asking to write a number
-		scanf("%d", &input);		//receiving number inputed		
-			if (input == 0) {		//if function for zero
-				printf("zero");
-}	else if (input > 9999)	{ 		//if number bigger than 9999
-				printf("надто велике число \n");
-				return(0);
-}
-				
-
-				while (input != 0) {		//cycle to put each number in correct position in array
+	char output[6][15] = {}; //array with output
+	char words[6][10][20] = {	//array with words(numbers)
+{},
+{"", "one thousand ", "two thousands ", "three thousands ", "four thousands ", "five thousands ", "six thousands ", "seven thousands ", "eight thousands ", "nine thousands "},
+{"", "one hundred ", "two hundreds ", "three hundreds ", "four hundreds ", "five hundreds ", "six hundreds ", "seven hundreds ", "eight hundreds ", "nine hundreds "},
+{"", "ten ", "twenty ", "thirty ", "fourty ", "fifty ", "sixty ", "seventy ", "eighty", "ninety"},
+{"", "one ", "two ", "three ", "four ", "five ", "six ", "seven ", "eight ", "nine"},
+{"", "eleven ", "twelve ", "thirteen ", "fourteen ", "fifteen ", "sixteen ", "seventeen ", "eighteen ", "nineteen "}
+};
+				while (input != 0) {		//cycle to put each number in correct position in numArray
 					numArray[num_pos] = input % 10;
-					input /= 10;	
+					input /= 10;
 					num_pos--;
 }
-
-
-				if (numArray[1] == 1) {			//result output
-					printf(" %s thousend", single[numArray[1]]);
-}	else if (numArray[1] > 1)	{
-					printf(" %s thousends", single[numArray[1]]);
+			num_pos = 4; //setting back number position
+			for (int j = 0; j < 4; j++) {		//cycle to extract 4 words from another array
+				for (int i = 0; i < 15; i++) {	//cycle to extract letters from another array
+					if (numArray[3] == 1 && j < 1) {	//if input has double-digit number
+						num_pos = 5;
+						output[num_pos][i] = words[num_pos][numArray[4]][i];
+						num_pos = 3;
+}	else	{	//basic input
+						output[num_pos][i] = words[num_pos][numArray[num_pos]][i];
 }
-				if (numArray[2] == 1) {
-					printf(" %s hundred", single[numArray[2]]);
-}	else if (numArray[2] == 0)	{
-
-}	else	{
-					printf(" %s hundreds", single[numArray[2]]);
 }
-				if (numArray[3] == 1) {
-					printf(" %s \n", doubles[numArray[4]]);
-}	else if (numArray[3] == 0) {
-
-}	else	{
-					printf(" %s ", tens[numArray[3]]);
+						num_pos--;
 }
-				if (numArray[4] >= 1 && numArray[3] != 1) {
-					printf(" %s \n", single[numArray[4]]);
-}
-
 	return 0;
 }
