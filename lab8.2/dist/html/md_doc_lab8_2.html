@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab08: lab8.2</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lab08
+   &#160;<span id="projectnumber">8.2</span>
+   </div>
+   <div id="projectbrief">Вступ до документації проекту</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">lab8.2 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><center>lab8.2 Вступ до документації проекту</center></h1>
+<h2><center>Звіт до лабораторної роботи №7</center></h2>
+<h2><center>Виконав студент Ворона Данило Олексійович, група КН-923в</center></h2>
+<p><b>Загальне завдання</b>: Помістити код 5 і 6 лабораторних робіт в функції <br  />
+<b>Завдання 22</b>: (**) Визначити найбільший спільний дільник для двох заданих чисел. <br  />
+<b>Завдання 23</b>: (**) Перетворити число (максимальне значення якого - 9999) в рядок. </p><h3><center>Опис програми</center></h3>
+<ul>
+<li><b>Функціональне призначення</b>: Користувач має можливість вибрати функцію для перетворення числа(від 0 до 9999) в слова або ж для знаходження НСД двох чисел. Генерація вхідних даних відбувається рандомно, але також можна вписати свої.</li>
+<li><b>Опис логічної структури</b>: <br  />
+<b>1.</b> Опис послідовності дій алгоритму: <img src="/home/dan/Зображення/block.png" alt="error" style="height: 400px; width: 400px;" class="inline"/> <img src="/home/dan/Зображення/NSD_function.png" alt="error" style="height: 400px; width: 400px;" class="inline"/> <img src="/home/dan/Зображення/num_in_words.png" alt="error" style="height: 400px; width: 400px;" class="inline"/> <img src="/home/dan/Зображення/num_in_words1.png" alt="error" style="height: 400px; width: 400px;" class="inline"/> <img src="/home/dan/Зображення/num_in_words2.png" alt="error" style="height: 400px; width: 400px;" class="inline"/>  <br  />
+<b>2.</b> Задали дві функції(клас void тому що значень вони не повертають): перша приймає значення від 0 до 9999 і перетворює його в словесне, друга - приймає два значення і знаходить НСД: <div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="main_8c.html#a909f3f5a70f0e7be9b5ffe4e617daac2">num_in_words</a> (<span class="keywordtype">int</span> input);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="main_8c.html#a6bd938c7a4274dfcb9dcf4a04ef18b0d">NSD_function</a> (<span class="keywordtype">int</span> number_one, <span class="keywordtype">int</span> number_two);</div>
+<div class="ttc" id="amain_8c_html_a6bd938c7a4274dfcb9dcf4a04ef18b0d"><div class="ttname"><a href="main_8c.html#a6bd938c7a4274dfcb9dcf4a04ef18b0d">NSD_function</a></div><div class="ttdeci">void NSD_function(int number_one, int number_two)</div><div class="ttdoc">функція для знаходження НСД</div><div class="ttdef"><b>Definition:</b> main.c:68</div></div>
+<div class="ttc" id="amain_8c_html_a909f3f5a70f0e7be9b5ffe4e617daac2"><div class="ttname"><a href="main_8c.html#a909f3f5a70f0e7be9b5ffe4e617daac2">num_in_words</a></div><div class="ttdeci">void num_in_words(int input)</div><div class="ttdoc">функція для переведення чисел в слова</div><div class="ttdef"><b>Definition:</b> main.c:29</div></div>
+</div><!-- fragment -->  <b>3.</b> Під функцією main прописали тіла 2 функцій <br  />
+<b>4.</b> В першій функції аргументи такі:</li>
+<li>char output[6][15] - двовимірний масив чарів, для виводу</li>
+<li>char words[6][10][20] - тривимірний масив чарів, зберігає словесні числа</li>
+<li>int numArray[5] - зберігає числа після ділення</li>
+<li>int num_pos = 4 - зберігає позицію числа</li>
+</ul>
+<p>В другій функції такі:</p><ul>
+<li>int number_one - зберігає перше число</li>
+<li>int number_two - зберігає друге число</li>
+<li>int NSD = number_one - зберігає кінцеве числове значення</li>
+</ul>
+<p>В тілі main тільки одна змінна function, яка зберігає 1 або 2 <br  />
+<b>5.</b> Структура програми:├── dist │&#160;&#160; └── html ├── doc │&#160;&#160; ├── lab8.2.docx │&#160;&#160; ├── <a class="el" href="lab8_82_8md.html">lab8.2.md</a> │&#160;&#160; └── lab8.2.pdf ├── Doxyfile ├── Makefile ├── <a class="el" href="README_8md.html">README.md</a> └── src └── <a class="el" href="main_8c.html">main.c</a>  <br  />
+<b>6.</b> Важливі фрагменти програми: Щоб отримати масив з числами використали такий цикл з часткою: </p><div class="fragment"><div class="line"><span class="keywordflow">while</span> (input != 0) {</div>
+<div class="line">    numArray[num_pos] = input % 10;</div>
+<div class="line">    input /= 10;    </div>
+<div class="line">    num_pos--;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Щоб порахувати НСД використали алгоритм Еквкліда: </p><div class="fragment"><div class="line"><span class="keywordflow">while</span> (number_one != number_two) {  </div>
+<div class="line">    <span class="keywordflow">if</span> (number_one &gt; number_two) {</div>
+<div class="line">        number_one = number_one - number_two;</div>
+<div class="line">}   <span class="keywordflow">else</span>    {</div>
+<div class="line">        number_two = number_two - number_one;</div>
+<div class="line">}</div>
+<div class="line">}</div>
+</div><!-- fragment -->  <h3><center>Варіанти використання</center></h3>
+<p><b>1.</b> Користувач може змінити значення function на 1 або 2: <img src="/home/dan/Зображення/function.png" alt="error" class="inline"/> <br  />
+<b>2.</b> Користувач отримає рандомне число в словах або НСД: <img src="/home/dan/Зображення/output_num.png" alt="error" class="inline"/> <img src="/home/dan/Зображення/output_NSD.png" alt="error" class="inline"/> <br  />
+<b>3.</b> Користувач може замість random ввести аргументи функції, які він забажає і отримати результат: <img src="/home/dan/Зображення/num.png" alt="error" class="inline"/> <img src="/home/dan/Зображення/out.png" alt="error" class="inline"/> <img src="/home/dan/Зображення/NSD.png" alt="error" class="inline"/> <img src="/home/dan/Зображення/five.png" alt="error" class="inline"/></p>
+<p><br  />
+ Мета лаборатнорної роботи, використання функцій замість багатьох строк коду була досягнута. Результати тестування програми багатьма разновидами чисел показали її роботоздатність, проте вона не підтримує мінусові чи занадто великі числа.  </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
