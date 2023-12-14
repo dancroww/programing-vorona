@@ -1,6 +1,6 @@
 #include <stdio.h>
-void num_in_words (int input); //number in words function
-void NSD_function (int number_one, int number_two); //NSD function
+int num_in_words (int input); //number in words function
+int NSD_function (int number_one, int number_two); //NSD function
 
 
 int main()
@@ -8,7 +8,7 @@ int main()
 
 srand(time(NULL));	//to generate random numbers
 
-	int function = 2;	//to store input
+	int function = 1;	//to store input
 		if (function == 1) {
 			num_in_words(0 + random() % (9999 - 0 + 1));	//calling 1st function and giving random values
 }	else if (function == 2) {
@@ -19,7 +19,7 @@ srand(time(NULL));	//to generate random numbers
 	return (0);
 }
 
-	void num_in_words (int input) //first function
+	int num_in_words (int input) //first function
 {
 char output[6][15] = {};	//array with output
 char words[6][10][20] = {	//array with words(numbers)
@@ -56,9 +56,10 @@ int numArray[5] = {'\0'}; //number array for first function
 	printf("%s", &output[i][j]);
 }
 }
+	return (output);
 }
 
-	void NSD_function (int number_one, int number_two) //second function
+	int NSD_function (int number_one, int number_two) //second function
 {
 			while (number_one != number_two) {		//while loop
 				if (number_one > number_two) {		//using euclid's algorithm
@@ -70,4 +71,5 @@ int numArray[5] = {'\0'}; //number array for first function
 }
 			int NSD = number_one;	//final value
 				printf("%d\n", NSD);
+	return (NSD);
 }
