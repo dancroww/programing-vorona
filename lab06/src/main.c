@@ -1,6 +1,6 @@
 int main()
 {
-	int input = 3415;	//variable for input
+	int input = 615;	//variable for input
 	int numArray[5] = {'\0'};	//array to store numbers
 	int num_pos = 4;	//variable for number position in array
 	char output[6][15] = {}; //array with output
