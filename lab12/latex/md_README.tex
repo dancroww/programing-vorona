@@ -1,0 +1,24 @@
+\hypertarget{md_README_autotoc_md1}{}\doxysubsection{Студент}\label{md_README_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Ім\textquotesingle{}я\+:}} Ворона Данило
+\item {\bfseries{Група\+:}} КН-\/923в
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysubsection{Завдання}\label{md_README_autotoc_md2}
+Без використання зовнішніх функцій необхідно реалізувати функції перетворення строки, що представляє собою число, до фактичного числа. Підтримувані типи\+: int, float. У рамках завдання можемо вважати, що строка не містить помилок та містить лише число.\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Опис програми}\label{md_README_autotoc_md3}
+Програма складається з двох основних компонентів\+:
+\begin{DoxyEnumerate}
+\item {\bfseries{src/lib.\+c, src/lib.\+h}}\+: Це файли, які містять реалізації функцій для перетворення строки у числа. У {\ttfamily lib.\+h} визначено прототипи цих функцій, а {\ttfamily lib.\+c} містить їхні реалізації.
+\item {\bfseries{src/main.\+c}}\+: Це головний файл програми, який містить {\ttfamily main()} функцію. У цьому файлі відбувається введення строки зі стандартного вводу, а потім викликаються функції з файлу {\ttfamily lib.\+c} для конвертації строки у числа та їх виведення на стандартний вивід.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Використання програми}\label{md_README_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Компіляція}}\+: Виконайте команду {\ttfamily make}, щоб скомпілювати проект.
+\item {\bfseries{Запуск}}\+: Після компіляції запустіть команду {\ttfamily make test}, щоб автоматично запустити тести. Цей тест користується вхідними даними з файлу {\ttfamily input.\+txt}.
+\item {\bfseries{Ручне тестування}}\+: Виконайте команду {\ttfamily make testing}, щоб ручно ввести вхідні дані під час виконання програми.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md5}{}\doxysubsection{Важливі зауваження}\label{md_README_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Передбачається, що вхідна строка містить лише числа та не має помилок.
+\item У разі неправильного введення, програма може давати непередбачувані результати або вести себе некоректно.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md6}{}\doxysubsection{Завершення}\label{md_README_autotoc_md6}
+Ця програма дозволяє вам легко конвертувати строки, які представляють числа, у фактичні числа типів int або float. Незважаючи на свою простоту, вона може бути корисною для широкого спектру завдань, де потрібно обробляти числові дані зі строки. 

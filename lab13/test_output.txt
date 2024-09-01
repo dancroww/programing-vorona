@@ -1,0 +1,26 @@
+doc/
+test_directory/
+    subdir2/
+        file3.txt
+    file1.txt
+    subdir1/
+        file2.txt
+src/
+    main.o
+    lib.h
+    lib.o
+    lib.c
+    main.c
+Makefile
+test/
+    test.o
+    test.c
+assets/
+    input.txt
+output.txt
+README.md
+Doxyfile
+bin/
+    main
+    test
+test_output.txt
